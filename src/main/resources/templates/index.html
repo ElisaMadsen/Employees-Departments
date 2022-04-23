@@ -3,8 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <title>Welcome</title>
+    <link rel="stylesheet" th:href="@{style.css}" href="../static/style.css">
 </head>
 <body>
     <h1>Welcome to Employees & Departments !!!!!</h1>
+
+    <section class="content">
+        <h1>Create new employee here:</h1>
+        <form method="POST" action="/employeeregistered">
+
+            <label for="employee-id">Please enter employee id:</label>
+            <input id="employee-id" type="number" name="employee-id"/>
+            <br>
+            <label for="employee-name">Please enter employee name:</label>
+            <input id="employee-name" type="text" name="employee-name"/>
+            <br>
+            <label for="employee-job">Please enter employee job:</label>
+            <input id="employee-job" type="text" name="employee-job"/>
+            <br>
+            <label for="employee-manager">Please enter employee manager:</label>
+            <input id="employee-manager" type="number" name="employee-manager"/>
+            <br>
+            <label for="employee-hiredate">Please enter employee hire date:</label>
+            <input id="employee-hiredate" type="date" name="employee-hiredate"/>
+            <br>
+            <label for="employee-salary">Please enter employee salary:</label>
+            <input id="employee-salary" type="number" name="employee-salary"/>
+            <br>
+            <label for="employee-commission">Please enter employee commission:</label>
+            <input id="employee-commission" type="number" name="employee-commission"/>
+            <br>
+            <label for="employee-department">Please enter department number:</label>
+            <input id="employee-department" type="number" name="employee-department"/>
+            <br>
+            <input type="submit">
+        </form>
+    </section>
+
+    <section class="content">
+        <h1>Find employee by ID here:</h1>
+        <form method="POST" action="/singleemployee">
+
+            <label for="single-employee-id">Please enter employee id:</label>
+            <input id="single-employee-id" type="number" name="single-employee-id"/>
+
+            <input type="submit">
+        </form>
+    </section>
 </body>
 </html>
